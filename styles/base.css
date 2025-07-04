@@ -154,7 +154,7 @@ main h1 {
 .card#about-me img {
     height: auto;
     align-self: flex-start;
-    width: 22rem;
+    max-width: 100%;
 }
 
 .card#birth-place img {
