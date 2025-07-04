@@ -5,7 +5,6 @@
 
     --heading-font: "Share Tech", sans-serif;
     --body-font: "Spectral", serif;
-    /* /"Roboto Slab", Roboto, sans-serif, serif; */
 }
 
 * {
@@ -95,7 +94,6 @@ main h1 {
 
 
 .card {
-    /* grid-row: 2 / -1; */
     position: relative;
     height: 100%;
     padding: 1rem;
@@ -190,5 +188,4 @@ h5,
 h6 {
     font-family: var(--heading-font);
     color: whitesmoke;
-    /* color: rgb(var(--primary-rgb)); */
 }
