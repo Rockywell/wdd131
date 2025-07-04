@@ -1,0 +1,194 @@
+:root {
+    --primary-rgb: 37, 38, 39;
+    --secondary-rgb: 244, 184, 96;
+    --accent-rgb: 128, 206, 215;
+
+    --heading-font: "Share Tech", sans-serif;
+    --body-font: "Spectral", serif;
+    /* /"Roboto Slab", Roboto, sans-serif, serif; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 0.7rem;
+}
+
+body {
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    transition: 0.1s ease-out;
+}
+
+a:hover {
+    transform: scale(1.15);
+    transition: 0.2s ease-in;
+}
+
+
+header {
+    display: flex;
+    height: fit-content;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header span {
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    background-color:  rgb(var(--primary-rgb));
+    color: rgb(var(--secondary-rgb));
+    text-align: center;
+    font-size: 4.25rem;
+}
+
+header nav {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    width: 100%;
+    padding: 2rem;
+    justify-content: space-around;
+    background-color: rgba(var(--primary-rgb), 0.8);
+}
+
+header nav a {
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+
+header nav a:hover {
+    color: rgb(var(--accent-rgb));
+}
+
+
+main {
+    display: grid;
+    position: relative;
+    height: max-content;
+    grid-template: auto 1fr / repeat(3, 1fr);
+    margin: 0 auto;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(var(--primary-rgb));
+    padding: 1rem 0 0;
+}
+
+
+.card {
+    /* grid-row: 2 / -1; */
+    position: relative;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.card#about-me {
+    grid-column: 1 / span 2;
+} 
+
+.card-navigation {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2rem;
+}
+
+.card-navigation a {
+    color: rgb(var(--primary-rgb));
+}
+
+.card h2 {
+    display: flex;
+    position: relative;
+    height: max-content;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    background-color: rgb(var(--accent-rgb));
+    color: #fefefe;
+}
+
+.card#birth-place h2 {
+    background-color: rgb(var(--primary-rgb));
+    color: #fefefe;
+}
+
+.card article {
+    display: grid;
+    position: relative;
+    height: max-content;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.card#birth-place article {
+    grid-template-columns: 1fr 2fr;
+}
+
+.card article div {
+    position: relative;
+    height: max-content;
+    width: 100%;
+}
+
+.card article div img {
+    position: relative;
+    height: auto;
+    width: 17rem;
+}
+
+
+footer {
+    display: flex;
+    position: relative;
+    height: max-content;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(var(--primary-rgb), 0.5);
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: whitesmoke;
+    /* color: rgb(var(--primary-rgb)); */
+}

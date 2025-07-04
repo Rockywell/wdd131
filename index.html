@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Porter Luke Frazier</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Porter Luke Frazier - Home Page">
+    <meta name="author" content="Porter Frazier">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="www.linkedin.com/in/porter-frazier-45aa9226b">LinkedIn</a>            
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p12#p12">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Porter Frazier</h1>
+        <section class="card" id="about-me">
+            <h2>About Me</h2>
+            <article>
+                <div>
+                    <p>Hello! I'm Porter. A young kid who loves to spend his freetime playing pickleball and coding in Logan, Utah. I'm currently working as a software engineer for companies like Data Annotation. My favorite thing to do is to challenge myself and to try new experiences! </p>
+                    <section class="card" id="birth-place">
+                        <h2>Logan, Utah</h2>
+                        <article>
+                            <img src="images/utah-flag.png" alt="The Utah Flag">
+                            <p>Utah is home to the <strong>Great Salt Lake</strong>, the largest saltwater lake in the Western Hemisphere! Its high salinity lets you easily float, just like in the Dead Sea. This natural wonder also supports a unique ecosystem and serves as a vital stop for millions of migratory birds each year.</p>
+                        </article>
+                    </section>
+                </div>
+                <img src="images/porter-frazier-profile.jpg" alt="LinkedIn Profile Image" width="236" height="236">
+            </article>
+        </section>
+        <section  class="card">
+            <h2>Web Dev Resources</h2>
+            <nav class="card-navigation">
+                <a href="https://www.codecademy.com">CodeCademy</a>
+                <a href="https://www.w3schools.com/">W3Schools</a>
+                <a href="https://www.udemy.com/">Udemy</a>
+                <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+                <a href="https://www.typescriptlang.org/">TypeScript Docs</a>
+                <a href="https://www.php.net/docs.php">PHP Docs</a>
+            </nav>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - Porter Luke Frazier - Utah</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
