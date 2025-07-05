@@ -29,6 +29,7 @@ header h1 {
     color: var(--secondary-color);
     border-bottom-right-radius: 1rem;
     padding: 0.25rem;
+    border-bottom: 1px solid;
     margin: 0;
 }
 
@@ -111,7 +112,7 @@ main {
     text-align: center;
 }
 
-h1 {
+h2 {
     border-bottom: 0.5rem solid;
     margin: 1rem 0;
 }
