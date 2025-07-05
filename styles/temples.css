@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: whitesmoke;
+
+    --heading-font: "Limelight", serif;
+    --body-font: "Share Tech", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--primary-color);
+    font-family: var(--body-font);
+}
+
+header {
+    position: relative;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* margin-left: 1rem; */
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-bottom-right-radius: 0.4rem;
+    padding: 0.25rem;
+}
+
+main {
+    max-width: 75%;
+    margin: 0 auto; 
+}
+
+#menu {
+    position: absolute;
+    background: none;
+	border: 0;
+    top: 0rem;
+    right: 1rem;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+
+#menu.open {
+    top: 1.7rem;
+    color: var(--secondary-color);
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "x";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: var(--secondary-color);
+    transition: 0.2s;
+}
+
+.navigation a:hover {
+	background-color: #bbb;
+	color: var(--primary-color);
+}
+
+.navigation.open a {
+	display: block;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 8px;
+  padding: 8px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+    border: 5px solid;
+}
+
+.gallery figcaption {
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+h1 {
+    border-bottom: 0.5rem solid;
+    margin: 1rem 0;
+}
+
+footer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #333;
+    color: whitesmoke;
+    width: 100%;
+    border-bottom-right-radius: 0.4rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
