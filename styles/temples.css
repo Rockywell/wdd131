@@ -21,14 +21,15 @@ header {
     position: relative;
 }
 
-header span {
+header h1 {
     font-size: 1.5rem;
     font-weight: bold;
     /* margin-left: 1rem; */
     background: var(--primary-color);
     color: var(--secondary-color);
-    border-bottom-right-radius: 0.4rem;
+    border-bottom-right-radius: 1rem;
     padding: 0.25rem;
+    margin: 0;
 }
 
 main {
@@ -49,7 +50,7 @@ main {
 }
 
 #menu.open {
-    top: 1.7rem;
+    top: 2.7rem;
     color: var(--secondary-color);
 }
 
