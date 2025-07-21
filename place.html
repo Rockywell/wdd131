@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Porter Luke Frazier - Places">
+    <meta name="author" content="Porter Frazier">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Georgia</h1>
+        </header>
+        <section class="hero">
+            <picture>
+                <source srcset="images/georgia-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/georgia-medium.webp" media="(min-width: 500px)">
+                <img src="images/georgia-small.webp" alt="Qazbegi, Georgia" width="500" height="250">
+            </picture>
+            <table id="data">
+                <thead>
+                    <tr>
+                        <th colspan="2">Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Area</td>
+                        <td>587 sq km</td>
+                    </tr>
+                    <tr>
+                        <td>Population</td>
+                        <td>3,704,000</td>
+                    </tr>
+                     <tr>
+                        <td>Capital</td>
+                        <td>Tibilisi</td>
+                    </tr>
+                    <tr>
+                        <td>Languages</td>
+                        <td>Georgian, Russian</td>
+                    </tr>
+                    <tr>
+                        <td>Currency</td>
+                        <td>Georgian Lari</td>
+                    </tr>
+                    <tr>
+                        <td>Time Zone</td>
+                        <td>UTC+4</td>
+                    </tr>
+                    <tr>
+                        <td>Calling Code</td>
+                        <td>+995</td>
+                    </tr>
+                    <tr>
+                        <td>Internet TLD</td>
+                        <td>.ge</td>
+                    </tr>                                                                                                                      
+                </tbody>
+            </table>
+            <table id="weather">
+                <thead>
+                    <tr>
+                        <th colspan="2">Weather<img class="weather-icon" src="images/partly-cloudy.svg" alt="Weather Icon" width="16" height="16"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Temperature</td>
+                        <td id="temperature">24 ℃</td>
+                    </tr>
+                    <tr>
+                        <td>Conditions</td>
+                        <td>Partly Cloudy</td>
+                    </tr>
+                    <tr>
+                        <td>Wind</td>
+                        <td id="windSpeed">16 km/h</td>
+                    </tr>
+                    <tr>
+                        <td>Wind Chill</td>
+                        <td id="windChill">N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - Porter Luke Frazier - Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

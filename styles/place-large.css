@@ -1,0 +1,31 @@
+@media (min-width: 800px) {
+    .hero {
+        position: relative;
+    }
+
+    .hero table {
+        position: absolute;
+        width: auto;
+        height: auto;
+        margin: 1rem;
+    }
+
+    .hero .weather-icon {
+        display: none !important;
+    }
+
+    #weather {
+        bottom: 0;
+        right: 0;
+    }
+
+    #weather th:after {
+        margin-left: 1rem;
+        content: "⛅️";
+    }
+
+    #data {
+        top: 0;
+        left: 0;
+    }
+}
