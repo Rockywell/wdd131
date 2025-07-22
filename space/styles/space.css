@@ -1,0 +1,183 @@
+:root {
+    --sun-rgb: 255, 200, 0;
+    --mercury-rgb: 169, 169, 169;
+    --venus-rgb: 255, 215, 180;
+    --earth-rgb: 0, 123, 255;
+    --mars-rgb: 255, 69, 0;
+    --jupiter-rgb: 255, 165, 0;
+    --saturn-rgb: 255, 223, 128;
+    --uranus-rgb: 173, 216, 230;
+    --neptune-rgb: 72, 61, 139;
+    /* --pluto-rgb: 205, 133, 63; */
+
+}
+
+@keyframes wiggle {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(1px, -0.8px); }
+  50%  { transform: translate(-1.2px, 1px); }
+  75%  { transform: translate(0.8px, 0.6px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* Global Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+body { 
+    scroll-behavior: smooth;
+    /* background: radial-gradient(circle at center, #00111a, #000);    */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow:
+    50px 100px white,
+    120px 200px white,
+    300px 80px white,
+    500px 150px white,
+    700px 300px white,
+    100px 400px white,
+    600px 500px white,
+    900px 100px white;
+  animation: twinkle 4s infinite ease-in-out, wiggle 7s infinite ease-in-out;
+  /* z-index: 0; */
+}
+
+h1 {
+    font-size: larger;
+}
+
+/* Section Styles */
+section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    /* background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0, 
+    rgba(255, 255, 255, 0.02) 10px, 
+    rgba(0, 0, 0, 0) 10px,
+    rgba(0, 0, 0, 0) 20px  
+    ); */
+    overflow: hidden;
+}
+.content {
+    width: 45%;
+    z-index: 2;
+}
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+.btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover { background: rgba(255,255,255,0.2); }
+
+/* Planet Image Styles */
+#sun .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--sun-rgb), 0.7);
+}
+#mercury .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--mercury-rgb), 0.7);
+}
+#venus .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--venus-rgb), 0.7);
+}
+#earth .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--earth-rgb), 0.7);
+}
+#mars .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--mars-rgb), 0.7);
+}
+#jupiter .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--jupiter-rgb), 0.7);
+}
+#saturn .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--saturn-rgb), 0.7);
+}
+#uranus .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--uranus-rgb), 0.7);
+}
+#neptune .planet {
+    box-shadow: 0 0 15px 5px rgba(var(--neptune-rgb), 0.7);
+}
+
+.planet {
+    width: 80vh;
+    height: 80vh;
+    background: black;
+    box-shadow: 0 0 15px 5px rgba(0, 150, 255, 0.7); /* Default Glow */
+    object-fit: contain;
+    transform: scale(0.8);
+    transition: transform 1s ease-out;
+    will-change: transform;
+    border-radius: 50%;
+}
+
+.planet.in-view { transform: scale(1); }
+
+/* Moon Overlay */
+.overlay {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.95);
+    border: 2px solid #444;
+    border-radius: 8px;
+    padding: 2rem;
+    display: none;
+    z-index: 10;
+}
+.overlay.active { display: block; }
+.overlay h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.overlay p { margin-bottom: 0.5rem; }
+.overlay .close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
