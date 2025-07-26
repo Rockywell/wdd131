@@ -123,5 +123,4 @@ function createTempleCards(temples) {
     `).join('');
 }
 
-
 createTempleCards(temples)
