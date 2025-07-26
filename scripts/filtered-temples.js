@@ -112,7 +112,7 @@ const gallery = document.querySelector(".gallery")
 function createTempleCards(temples) {
     gallery.innerHTML = temples.map(temple => `
         <figure>
-            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy">
+            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" width="400" height"300">
             <figcaption>
                 <h2>${temple.templeName}</h2>
                 <strong>Location:</strong> ${temple.location}<br>
