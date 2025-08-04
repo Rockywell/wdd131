@@ -31,7 +31,8 @@ html, body {
     height: 100%;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    background: #000;
+    /* #0A0A0A */
+    background-color: #000;
     color: #fff;
 }
 
