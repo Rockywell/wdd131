@@ -1,0 +1,217 @@
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0;}
+
+
+body {
+    height: 100vh;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+
+header {
+    padding: .5rem 2%;
+    background-color: #ddd;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+
+nav {
+    background-color: #666;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {border-bottom: solid 1px #333;}
+nav ul li a {
+    display: block;
+    background-color: #444;
+    color: #eee;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+
+fieldset {
+    background-color: whitesmoke;
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+fieldset > fieldset {
+    margin: 1rem 0 0 0;
+    border: none;
+    padding: 0;
+}
+
+fieldset > fieldset legend {
+    font-size: .9em;
+    padding: 0;
+    margin-bottom: -0.5rem;
+    color: black;
+}
+
+legend {
+    color: #4466DD;
+    padding: 0 .5rem;
+}
+
+label {
+    display: block;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: .9rem
+}
+
+label::before {
+    margin-left: -0.5rem;
+}
+
+
+input[type="text"],
+input[type="textarea"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    background-color: white;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    min-height: 44px;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+}
+
+input[type="submit"] {
+    background-color: #4466DD;
+    color: #fff;
+    /* -webkit-text-stroke: 2px black; */
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    width: 96%;
+    max-width: 400px;
+    padding: .7rem;
+    border: none;
+    border-radius: 6px;
+    margin: -1rem 2% 2rem 2%;
+}
+
+select:required, input:required {
+    border: solid 2px red;
+    border-left: solid 8px red;
+}
+
+select:required:valid, input:required:valid {
+    border: solid 2px green;
+    border-left: solid 8px green;
+}
+
+textarea {
+    height: 10em;
+}
+
+
+.stars {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+
+.stars input:required:invalid + label::before {
+    color: red;
+    content: "\2606"; /*empty star */
+}
+
+.stars > label {
+    color: gold;
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+/* 	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+
+.stars > label:hover {
+    -webkit-text-stroke: 2px black;
+}
+
+.stars input:checked ~ label::before {
+	content: "\2606"; /*empty star */
+}
+
+.stars > label::before, .stars input:checked + label::before {
+    content: "\2605";
+}
+
+#submissionMessage {
+    height: 80dvh;
+    text-align: center;
+    background-color: whitesmoke;
+    border: solid 0.5rem #4466DD;
+    margin: 1rem 0;
+    border-radius: 1rem;
+}
+
+#submissionMessage > h1 {
+    padding: 1rem;
+    margin: 0 5rem 3rem;
+    /* margin-bottom: 1rem; */
+    border-bottom: solid 2px #4466DD;
+}
+
+#submissionMessage > h2 {
+    height: 50%;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 3rem;
+    padding: 2rem;
+    font-size: medium;
+}
+
+
+footer {
+    background-color: #ddd;
+    padding: 1rem 2%;
+    text-align: center;
+}

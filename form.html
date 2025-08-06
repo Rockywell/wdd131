@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+
+        <title>WDD 131 – Product Form – Porter Luke Frazier</title>
+        <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Porter Luke Frazier - Product Review Form">
+        <meta name="author" content="Porter Frazier">
+
+
+
+
+
+        <link href="styles/form.css" rel="stylesheet">
+        <script src="scripts/form.js" defer></script>
+        <script src="scripts/getdates.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Product Review</h1>
+        </header>
+        
+        
+    <!-- NAVIGATION HERE -->
+        <!-- <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li class="active"><a href="#">Propose</a></li>
+                <li><a href="#">Winners</a></li>
+                <li><a href="#">Contact</a></li>    
+            </ul>
+        </nav> -->
+        
+        
+        <main>
+            <h1>Course Proposal Application</h1>
+            <!-- Input Considerations
+                type value
+                name  required/not
+                instructions placeholder
+            -->
+            <form method="get" action="review.html">
+                <fieldset>
+                    <legend>Product Info</legend>
+
+                    <fieldset>
+                        <legend>Product Name</legend>
+                        <label>
+                            <select id="product" name="product" required>
+                                <option value="" aria-disabled="true" disabled selected>Select a Product ... &#9662;</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    
+                    <fieldset class="stars">
+                        <legend>Overall Rating</legend>
+        
+                        <input id="firstStar" type="radio" name="rating" value="1" required>
+                        <label for="firstStar"></label>
+
+                        <input id="secondStar" type="radio" name="rating" value="2" required>
+                        <label for="secondStar"></label>
+
+                        <input id="thirdStar" type="radio" name="rating" value="3" required>
+                        <label for="thirdStar"></label>
+
+
+                        <input id="fourthStar" type="radio" name="rating" value="4" required>
+                        <label for="fourthStar"></label>
+
+                        <input id="fifthStar" type="radio" name="rating" value="5" required>
+                        <label for="fifthStar"></label>
+                    </fieldset> 
+
+                    <label for="completionDate">Date of Installation</label>
+                    <input id="completionDate" type="date" name="completionDate" required>
+                
+                </fieldset>
+
+                <fieldset>
+                    <legend>Which features did you find useful in the product?</legend>
+                    <p>(Check all that apply)</p>
+
+                    <label>
+                        <input id="design" type="checkbox" name="design" value="yes">
+                        Design
+                    </label>
+                    <label>
+                        <input id="durability" type="checkbox" name="durability" value="yes">
+                        Durability
+                    </label>
+                    <label>
+                        <input id="easeOfUse" type="checkbox" name="easeOfUse" value="yes">
+                        Ease of Use
+                    </label>
+                    <label>
+                        <input id="performance" type="checkbox" name="performance" value="yes">
+                        Performance
+                    </label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Product Thoughts</legend>
+                    <label for="review">Written Review</label>
+                    <textarea name="review" id="review"></textarea>
+
+                    <label for="userName">Your Name</label>
+                    <input id="userName" type="text" name="userName">
+                </fieldset>
+
+                <input type="submit" value="Post Review">
+            </form>
+            
+            
+        </main>
+        
+        <footer>
+            <p>&copy; <span id="currentyear"></span> - Porter Luke Frazier - Utah</p>
+            <p id="lastModified"> </p>
+        </footer>
+    <script src="js/scripts.js"></script>
+    </body>
+</html>
