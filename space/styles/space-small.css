@@ -1,0 +1,20 @@
+@media (max-width: 600px) {
+    header nav {
+        justify-content: space-around;
+    }
+
+    section {
+        margin-top: 15%;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .planet {
+        max-width: 90vw;
+        width: 90vw;
+    }
+}

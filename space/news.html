@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Solar System</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Porter Luke Frazier - Solar System">
+    <meta name="author" content="Porter Frazier">
+    
+    <link rel="stylesheet" href="styles/space.css">
+    <link rel="stylesheet" href="styles/space-small.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Learn More</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">News</a>
+        </nav>
+    </header>
+
+    <main class="heading-content newsletter">
+        <section>
+            <h2>Nova News</h2>
+            <p>Can't get enough of space and the solar system? Subscribe to my newsletter to get weekly updates on products, science experiments, NASA, Space, the Solar System and beyond!</p>
+        </section>
+        <form method="get" action="news.html">                    
+            <fieldset>
+                <legend>Subscriber Info</legend>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required>
+
+                <label for="userName">User Name</label>
+                <input id="userName" type="text" name="userName">
+            </fieldset>
+
+            <input type="submit" value="Tell Me More About Space!">
+        </form>
+
+            <!-- <img src="images/milky-way.webp" alt="The milky way" loading="lazy"/> -->
+    </main>
+</body>
+</html>
