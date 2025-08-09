@@ -17,8 +17,8 @@
     --dynamic-rgb: var(--rgb-accent);
 
     
-     --head-font: 'Montserrat', sans-serif;
-    --body-font: 'Arial', sans-serif;
+     --body-font: 'Montserrat', sans-serif;
+    --head-font: 'Arial', sans-serif;
 
 
     --animation-scale: 1;
@@ -98,6 +98,12 @@ footer {
     background-color: rgb(var(--rgb-primary));
 }
 
+header, footer {
+    border-radius: 8px;
+    box-shadow: 0 0 15px 5px rgba(var(--rgb-secondary), 0.15);
+    margin: 1rem;
+}
+
 h1, h2, h3 {
     font-family: var(--head-font);
 }
@@ -118,11 +124,7 @@ nav a {
 
 header {
     /* background-color: rgba(var(--rgb-secondary), 0.02); */
-
     padding: 2rem; 
-    border-radius: 8px;
-    margin: 1rem;
-    box-shadow: 0 0 15px 5px rgba(var(--rgb-secondary), 0.15);
 }
 
 header h1 {
@@ -443,7 +445,7 @@ ul.space-resources li {
 }
 
 ul.space-resources ul li:hover {
-  /* text-shadow: 0 0 8px rgba(180, 220, 255, 0.8), 0 0 15px rgba(150, 100, 255, 0.6); */
+  text-shadow: 0 0 8px rgba(var(--rgb-secondary), 0.8);
   cursor: pointer;
 }
 
@@ -455,4 +457,10 @@ ul.space-resources li:last-child {
     font-size: 2rem;
     letter-spacing: 3px;
     text-decoration: none;
+}
+
+footer {
+    padding: 1.5rem; 
+    margin: 1rem;
+    text-align: center;
 }

@@ -37,7 +37,7 @@ const astralData = {
         },
         {
             name: "Mars",
-            description: "The Sun's energy fuels its seasons; its thin atmosphere can't keep heat in like Earth."
+            description: "The Sun's heat fuels the seasons as it's thin atmosphere can't retain heat."
         },
         {
             name: "Jupiter",
@@ -66,7 +66,7 @@ const astralData = {
     }],
     earth: [{
             name: "Moon",
-            description: "Earth's only natural satellite, often referred to simply as \"the Moon\". It is about 1/4th the size of Earth and is the fifth-largest moon in the Solar System. The Moon is slowly drifting away from Earth at a rate of about 1.5 inches (3.8 cm) per year."
+            description: "Earth's only natural satellite, often referred to simply as \"the Moon\". The Moon is slowly drifting away from Earth at a rate of about 1.5 inches (3.8 cm) per year."
     }],
     mars: [{
             name: "Phobos",

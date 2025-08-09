@@ -17,7 +17,6 @@ if(subscribed()) {
     newsletter.appendChild(unsubButton);
 
     unsubButton.addEventListener('click', event => {
-        console.log("HYSDF")
         unsubscribe();
         location.reload();
     })
